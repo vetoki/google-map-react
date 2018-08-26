@@ -311,7 +311,9 @@ export default class GoogleMap extends Component {
         const currCenter = this._isCenterDefined(this.props.center)
           ? latLng2Obj(this.props.center)
           : null;
-
+        // Modified from original
+        currCenter = centerLatLng;
+        // End of modification
         if (
           !currCenter ||
           Math.abs(nextPropsCenter.lat - currCenter.lat) +
